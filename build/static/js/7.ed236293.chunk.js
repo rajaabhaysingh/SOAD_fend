@@ -1,0 +1,2 @@
+(this.webpackJsonpfrontend=this.webpackJsonpfrontend||[]).push([[7],{89:function(e,n,t){"use strict";t.r(n);var r=t(0),a=t.n(r);n.default=function(){return a.a.createElement("div",null,a.a.createElement("div",null,"You are inside categories"))}}}]);
+//# sourceMappingURL=7.ed236293.chunk.js.map
