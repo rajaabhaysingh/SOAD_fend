@@ -1,8 +1,8 @@
-import axiosInstance from "../../helpers/axios";
+import axiosInstance from "../../../helpers/axios";
 
-export const register = () => {
+export default () => {
   axiosInstance
-    .post("auth/register/")
+    .get("/jobs/my/")
     .then((response) => {
       console.log(response);
     })

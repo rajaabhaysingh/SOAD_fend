@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 
-import { register } from "../../../contexts/actions/register";
+import RegisterUI from "../../layouts/formUI/RegisterUI";
+import useForm from "./useForm";
 
 const Signup = () => {
-  useEffect(() => {
-    register();
-  }, []);
+  useEffect(() => {}, []);
 
-  return <div>This is SIGN-UP.</div>;
+  return <RegisterUI formHook={useForm()} />;
 };
 
 export default Signup;
