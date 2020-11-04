@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
 import { NavLink, useHistory } from "react-router-dom";
-import { userContext } from "../../../App";
 
 import * as Colors from "../../../constants/Colors";
 import headerLogo from "../../../res/header/logo_72x72.png";
@@ -9,9 +8,6 @@ import headerLogo from "../../../res/header/logo_72x72.png";
 const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
   // initilizing useHistory and useRouteMatch
   const history = useHistory();
-
-  // using imported context
-  const { isLoggedIn, userName, user, setUser } = useContext(userContext);
 
   // handling drawer classes open/close
   let drawerClasses = "fcol bg_white side_drawer";
@@ -27,17 +23,11 @@ const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
   // logOutUser
   const logOutUser = () => {
     // removing login info from local storage
-    localStorage.removeItem("isCurrentlyLoggedIn");
+    localStorage.removeItem("tokens");
     localStorage.removeItem("username");
 
     // logging out locally too
-    setUser(() => {
-      return {
-        isLoggedIn: false,
-        userName: undefined,
-        accessToken: undefined,
-      };
-    });
+    // ---
     // closeDrawer();
   };
 
@@ -50,13 +40,13 @@ const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
 
   // renderIsLoggedIn
   const renderIsLoggedIn = () => {
-    if (isLoggedIn && userName) {
+    if (localStorage.tokens && localStorage.username) {
       return (
         <>
           <div className="fcol mar_l-16 mar_t-12 mar_b-12 of-scr sb-hid">
             <div className="fc_8a fsxs">Logged in as:</div>
             <div className="fsxs no_wrap of-scr fc_5c mar_t-4 fwb">
-              {userName}
+              {localStorage.username}
             </div>
           </div>
           <button
