@@ -1,4 +1,4 @@
-import axiosInstance from "../../../helpers/axios";
+import axiosInstance from "../../../helpers/axiosInstance";
 
 import {
   LOGIN_LOADING,
@@ -11,13 +11,14 @@ export const login = ({ username, password }) => (dispatch) => {
     type: LOGIN_LOADING,
   });
 
-  axiosInstance
+  axiosInstance()
     .post("auth/login/", {
       username,
       password,
     })
     .then((response) => {
       localStorage.tokens = response.data.tokens;
+      localStorage.username = response.data.username;
       dispatch({
         type: LOGIN_SUCCESS,
         payload: response.data,

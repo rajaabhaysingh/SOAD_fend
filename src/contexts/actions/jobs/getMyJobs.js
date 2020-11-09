@@ -1,7 +1,7 @@
-import axiosInstance from "../../../helpers/axios";
+import axiosInstance from "../../../helpers/axiosInstance";
 
-export default () => {
-  axiosInstance
+export default (history) => {
+  axiosInstance(history)
     .get("/jobs/my/")
     .then((response) => {
       console.log(response);
