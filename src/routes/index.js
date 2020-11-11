@@ -60,7 +60,13 @@ const routes = [
   },
   // Public Pages
   {
-    path: "/public/:personname",
+    path: "/public" | "/public/profile",
+    component: Sample_Public,
+    title: "Workgent - Public pages",
+    needsAuth: false,
+  },
+  {
+    path: "/public/jobs",
     component: Sample_Public,
     title: "Workgent - Public pages",
     needsAuth: false,
