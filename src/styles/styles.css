@@ -3,14 +3,15 @@
   --pri-col-click: #0057ad;
   --pri-light: #008ff7;
   --pri-lighter: #77c6ff;
-  --pri-very-light: #f0f9ff;
+  --pri-very-light: #d9efff;
   --sec-col: #2e3192;
   --sec-col-click: #1d275a;
   --ter-col: #0a2436;
+  --ter-light: #163346;
   --error: #cc0000;
   --error-light: #ffdfdf;
   --success: #008800;
-  --success-light: #ebffeb;
+  --success-light: #e3ffe3;
   --warning: #ee5700;
   --warning-light: #fffbef;
   --white: #ffffff;
@@ -19,8 +20,10 @@
   --text-5c: #5c5c5c;
   --text-8a: #8a8a8a;
   --eeeeee: #eeeeee;
+  --f5f5f5: #f5f5f5;
   --light-gray: #dddddd;
   --gray: #b3b3b3;
+  --body-gray: #e6e7ee;
   --transparent: #00000000;
 }
 
@@ -38,6 +41,9 @@ img {
 }
 .bg_sec {
   background: var(--sec-col);
+}
+.bg_ter {
+  background: var(--ter-col);
 }
 .bg_err {
   background: var(--error);
@@ -60,12 +66,18 @@ img {
 .bg-light-gray {
   background: var(--light-gray);
 }
+.bg_body_gray {
+  background: var(--body-gray);
+}
 
 .bg_pri-light {
   background: var(--pri-very-light);
 }
 .bg_sec-light {
   background: var(--sec-col-light);
+}
+.bg_ter-light {
+  background: var(--ter-light);
 }
 .bg_err-light {
   background: var(--error-light);
@@ -115,6 +127,9 @@ img {
 .round_lrt-8 {
   border-radius: 8px 8px 0 0;
 }
+.round_rt-8 {
+  border-radius: 0 8px 0 0;
+}
 .round_lrb-8 {
   border-radius: 0 0 8px 8px;
 }
@@ -156,8 +171,18 @@ img {
 .h-40 {
   height: 40px;
 }
-.h-80 {
+.h-80,
+.h-80p {
   height: 80px;
+}
+.h-60p {
+  height: 60px;
+}
+.h-32p {
+  height: 32px;
+}
+.h-36p {
+  height: 36px;
 }
 .h-100 {
   height: 100%;
@@ -168,14 +193,31 @@ img {
 .w-40 {
   width: 40px;
 }
-.w-80 {
+.w-20p {
+  width: 20px;
+}
+.w-80,
+.w-80p {
   width: 80px;
+}
+.w-60p {
+  width: 60px;
+}
+.w-32p {
+  width: 32px;
+}
+.w-36p {
+  width: 36px;
 }
 
 /* links */
 .link {
   text-decoration: none;
 }
+.link-v:visited {
+  color: inherit;
+}
+
 .link-white {
   text-decoration: none;
   color: var(--white);
@@ -224,6 +266,9 @@ img {
 .align-r {
   text-align: end;
 }
+.align-c {
+  text-align: center;
+}
 
 /* border */
 .bor_pri-1 {
@@ -235,14 +280,17 @@ img {
 .bor_err-1 {
   border: 1px solid var(--error);
 }
+.bor_err-2 {
+  border: 2px solid var(--error);
+}
 .bor_warn-1 {
   border: 1px solid var(--warning);
 }
 .bor_succ-1 {
   border: 1px solid var(--success);
 }
-.bor_succ-1 {
-  border: 1px solid var(--success);
+.bor_succ-2 {
+  border: 2px solid var(--success);
 }
 .bor_gray-1 {
   border: 1px solid var(--gray);
@@ -253,8 +301,17 @@ img {
 .bor_b_pri-1 {
   border-bottom: 1px solid var(--pri-col);
 }
+.bor_b_gray-1 {
+  border-bottom: 1px solid var(--gray);
+}
+.bor_b_gray-2 {
+  border-bottom: 2px solid var(--gray);
+}
 
 /* font properties */
+.fs2xs {
+  font-size: 0.6rem;
+}
 .fsxs {
   font-size: 0.75rem;
 }
@@ -302,6 +359,12 @@ img {
 }
 .fc_white {
   color: var(--white);
+}
+.fc_gray-light {
+  color: var(--light-gray);
+}
+.fc_gray {
+  color: var(--gray);
 }
 .fc_5c {
   color: var(--text-5c);
@@ -351,6 +414,11 @@ img {
 .no_wrap {
   white-space: nowrap;
 }
+.ellip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .of-scr {
   overflow: scroll;
 }
@@ -394,6 +462,10 @@ img {
   .btn_sec:active {
     background: var(--pri-very-light);
   }
+  .btn_gray:active,
+  .btn_gray:active {
+    background: var(--gray);
+  }
   .link_foc_u:active {
     text-decoration: underline;
   }
@@ -411,6 +483,10 @@ img {
     background: var(--pri-very-light);
     color: var(--pri-col);
   }
+  .job_card_pvt:active,
+  .card_menu_item:active {
+    background: var(--eeeeee);
+  }
 }
 /* stylus-based screens */
 @media (hover: none) and (pointer: fine) {
@@ -421,6 +497,10 @@ img {
   .btn_sec:active,
   .btn_sec:active {
     background: var(--pri-very-light);
+  }
+  .btn_gray:active,
+  .btn_gray:active {
+    background: var(--gray);
   }
   .link_foc_u:active {
     text-decoration: underline;
@@ -445,6 +525,10 @@ img {
   .active_menu_opt:active {
     background: var(--pri-very-light);
   }
+  .job_card_pvt:active,
+  .card_menu_item:active {
+    background: var(--eeeeee);
+  }
 }
 /* Nintendo Wii controller, Microsoft Kinect */
 @media (hover: hover) and (pointer: coarse) {
@@ -456,39 +540,9 @@ img {
   .btn_sec:hover {
     background: var(--pri-very-light);
   }
-  .link_foc_u:acthoverive {
-    text-decoration: underline;
-  }
-  .foc_op-1:hover {
-    opacity: 1;
-  }
-  .foc_btn_icon_op-1:hover > i {
-    opacity: 1;
-  }
-  .foc_opt_btn:hover {
-    background: var(--pri-light);
-    transition: ease-in 0.2s;
-  }
-  .sd_link_opt:hover {
-    background: var(--pri-very-light);
-    color: var(--pri-col);
-  }
-  .input_assist_btn:hover {
-    background-color: var(--light-gray);
-  }
-  .active_menu_opt:hover {
-    background: var(--pri-very-light);
-  }
-}
-/* mouse, touch pad */
-@media (hover: hover) and (pointer: fine) {
-  .btn_pri:hover,
-  .btn_pri:hover {
-    background: var(--pri-col-click);
-  }
-  .btn_sec:hover,
-  .btn_sec:hover {
-    background: var(--pri-very-light);
+  .btn_gray:hover,
+  .btn_gray:hover {
+    background: var(--gray);
   }
   .link_foc_u:hover {
     text-decoration: underline;
@@ -512,6 +566,50 @@ img {
   }
   .active_menu_opt:hover {
     background: var(--pri-very-light);
+  }
+  .card_menu_item:hover {
+    background: var(--eeeeee);
+  }
+}
+/* mouse, touch pad */
+@media (hover: hover) and (pointer: fine) {
+  .btn_pri:hover,
+  .btn_pri:hover {
+    background: var(--pri-col-click);
+  }
+  .btn_sec:hover,
+  .btn_sec:hover {
+    background: var(--pri-very-light);
+  }
+  .btn_gray:hover,
+  .btn_gray:hover {
+    background: var(--gray);
+  }
+  .link_foc_u:hover {
+    text-decoration: underline;
+  }
+  .foc_op-1:hover {
+    opacity: 1;
+  }
+  .foc_btn_icon_op-1:hover > i {
+    opacity: 1;
+  }
+  .foc_opt_btn:hover {
+    background: var(--pri-light);
+    transition: ease-in 0.2s;
+  }
+  .sd_link_opt:hover {
+    background: var(--pri-very-light);
+    color: var(--pri-col);
+  }
+  .input_assist_btn:hover {
+    background-color: var(--light-gray);
+  }
+  .active_menu_opt:hover {
+    background: var(--pri-very-light);
+  }
+  .card_menu_item:hover {
+    background: var(--eeeeee);
   }
 }
 
@@ -616,6 +714,26 @@ img {
 .slide:hover {
   transform: scale(0.99);
   transition: all 0.25s;
+}
+/* --------------- */
+
+/* -- account -- */
+.card_menu {
+  padding: 4px 0;
+  background: var(--white);
+}
+.card_menu_item {
+  padding: 8px;
+  cursor: pointer;
+}
+.popup-content {
+  border-radius: 8px;
+}
+.cnf_popup-content {
+  border-radius: 8px;
+  width: calc(100% - 32px);
+  max-width: 420px;
+  box-shadow: 1px 1px 8px var(--light-black);
 }
 /* --------------- */
 
@@ -730,6 +848,49 @@ img {
   .normal_job {
     min-width: 200px;
   }
+  .dash_header {
+    display: none;
+  }
+  .dash_drawer_hidden,
+  .dash_drawer_visible {
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .dash_body {
+    width: calc(100% - 240px);
+    position: absolute;
+    top: 0;
+    left: 241px;
+    overflow: scroll;
+  }
+  .dash_drawer_close_btn,
+  .dash_header_drawer_btn {
+    display: none;
+  }
+  .dash_body_box {
+    margin: 16px;
+  }
+  .dash_opt_btn-1 {
+    max-width: 160px;
+    height: 36px;
+  }
+  .job_list {
+    width: 100%;
+    max-width: 720px;
+  }
+  .job_card_pvt {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: var(--f5f5f5);
+    box-shadow: 1px 1px 4px var(--gray);
+  }
+  .card_menu {
+    box-shadow: 0 0 8px var(--gray);
+  }
 }
 
 /*for screen size greater or equal to 375px less than  768px*/
@@ -760,10 +921,10 @@ img {
     background-color: var(--pri-col);
   }
   .search_visible_body {
-    transform: translateY(66px);
+    transform: translateY(50px);
   }
   .search_hidden_body {
-    transform: translateY(16px);
+    transform: translateY(0);
   }
   .search_bar_icon {
     color: var(--white);
@@ -823,6 +984,72 @@ img {
   .normal_job {
     min-width: 160px;
   }
+  .dash_header {
+    height: 48px;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dash_drawer_hidden,
+  .dash_drawer_visible {
+    width: 220px;
+    height: 100%;
+    transition: all 0.25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .dash_drawer_hidden {
+    transform: translateX(-150%);
+  }
+  .dash_drawer_visible {
+    transform: translateX(0);
+  }
+  .dash_body {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .dash_drawer_close_btn {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top: 16px;
+    left: 236px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dash_header_drawer_btn {
+    width: 160px;
+    height: 36px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  .dash_body_box {
+    margin: 8px;
+  }
+  .dash_opt_btn-1 {
+    width: 100%;
+    height: 36px;
+  }
+  .job_list {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--gray);
+  }
+  .job_card_pvt {
+    border-bottom: 1px solid gray;
+  }
+  .card_menu {
+    box-shadow: 0 0 8px var(--gray);
+  }
 }
 
 /*for screen size less than 375px*/
@@ -853,10 +1080,10 @@ img {
     background-color: var(--pri-col);
   }
   .search_visible_body {
-    transform: translateY(66px);
+    transform: translateY(50px);
   }
   .search_hidden_body {
-    transform: translateY(16px);
+    transform: translateY(0);
   }
   .search_bar_icon {
     color: var(--white);
@@ -914,6 +1141,72 @@ img {
   }
   .normal_job {
     min-width: 160px;
+  }
+  .dash_header {
+    height: 48px;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dash_drawer_hidden,
+  .dash_drawer_visible {
+    width: 220px;
+    height: 100%;
+    transition: all 0.25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  .dash_drawer_hidden {
+    transform: translateX(-150%);
+  }
+  .dash_drawer_visible {
+    transform: translateX(0);
+  }
+  .dash_body {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .dash_drawer_close_btn {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top: 16px;
+    left: 236px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dash_header_drawer_btn {
+    width: 160px;
+    height: 36px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  .dash_body_box {
+    margin: 8px;
+  }
+  .dash_opt_btn-1 {
+    width: 100%;
+    height: 36px;
+  }
+  .job_list {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--gray);
+  }
+  .job_card_pvt {
+    border-bottom: 1px solid var(--gray);
+  }
+  .card_menu {
+    box-shadow: 0 0 8px var(--gray);
   }
 }
 

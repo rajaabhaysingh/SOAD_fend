@@ -15,7 +15,7 @@ import "./styles/paddings.css";
 import "./styles/displays.css";
 
 import PropTypes from "prop-types";
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory, Redirect } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
 
 import ErrorBoundary from "./components/errorBoundary/ErrorBoundary";
@@ -99,7 +99,7 @@ function App() {
 
   // hide searchbar onScroll
   useEffect(() => {
-    const threshold = 20;
+    const threshold = 8;
     let lastScrollY = window.pageYOffset;
     let ticking = false;
 
@@ -292,11 +292,7 @@ function App() {
                       {routes.map((route, index) => (
                         <RenderRoute {...route} key={index} />
                       ))}
-                      <Route>
-                        <h1>
-                          <code>Error 404, page not found.</code>
-                        </h1>
-                      </Route>
+                      <Redirect to="/error_404">Page not found</Redirect>
                     </Switch>
                   </Suspense>
                 </ErrorBoundary>
