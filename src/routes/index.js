@@ -11,6 +11,7 @@ import Events from "../components/events/Events";
 import Help from "../components/help/Help";
 import Error404 from "../components/layouts/errors/Error404";
 import Premium from "../components/premium/Premium";
+import Sample_Public from "../components/public_pages/sample_public"
 
 const routes = [
   // Home
@@ -56,6 +57,13 @@ const routes = [
     component: Account,
     title: "Workgent - Account",
     needsAuth: true,
+  },
+  // Public Pages
+  {
+    path: "/public/:personname",
+    component: Sample_Public,
+    title: "Workgent - Public pages",
+    needsAuth: false,
   },
   // Search
   {
