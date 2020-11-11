@@ -109,7 +109,7 @@ const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
           activeClassName="fwb fc_white bg_pri"
           exact
         >
-          <i className="fas fa-home mar_l-16 mar_r-16"></i>Home
+          <i className="fas fa-home mar_l-32 mar_r-16"></i>Home
         </NavLink>
         <NavLink
           onClick={closeDrawer}
@@ -118,16 +118,15 @@ const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
           activeClassName="fwb fc_white bg_pri"
           exact
         >
-          <i className="fas fa-th mar_l-16 mar_r-16"></i>Categories
+          <i className="fas fa-th mar_l-32 mar_r-16"></i>Categories
         </NavLink>
         <NavLink
           onClick={closeDrawer}
           to="/account"
           className="sd_link_opt w-100 link fc_pri fss pad_12-0"
           activeClassName="fwb fc_white bg_pri"
-          exact
         >
-          <i className="fas fa-user mar_l-16 mar_r-16"></i>Account
+          <i className="fas fa-user mar_l-32 mar_r-16"></i>Account
         </NavLink>
       </div>
       <div
@@ -137,12 +136,36 @@ const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
       <div className="fcol pad_r-8">
         <NavLink
           onClick={closeDrawer}
-          to="/notificaion"
+          to="/messages"
           className="sd_link_opt w-100 link fc_pri fss pad_12-0"
           activeClassName="fwb fc_white bg_pri"
           exact
         >
-          <i className="fas fa-bell mar_l-16 mar_r-16"></i>Notification
+          <i className="fas fa-envelope mar_l-32 mar_r-16"></i>Messages
+        </NavLink>
+      </div>
+      <div
+        style={{ height: "1px" }}
+        className="w-100 mar_t-12 mar_b-12 bg_pri"
+      ></div>
+      <div className="fcol pad_r-8">
+        <NavLink
+          onClick={closeDrawer}
+          to="/services"
+          className="sd_link_opt w-100 link fc_pri fss pad_12-0"
+          activeClassName="fwb fc_white bg_pri"
+          exact
+        >
+          <i className="fas fa-bell mar_l-32 mar_r-16"></i>Our services
+        </NavLink>
+        <NavLink
+          onClick={closeDrawer}
+          to="/premium"
+          className="sd_link_opt w-100 link fc_pri fss pad_12-0"
+          activeClassName="fwb fc_white bg_pri"
+          exact
+        >
+          <i className="fas fa-award mar_l-32 mar_r-16"></i>Premium
         </NavLink>
         <NavLink
           onClick={closeDrawer}
@@ -151,7 +174,7 @@ const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
           activeClassName="fwb fc_white bg_pri"
           exact
         >
-          <i className="fas fa-question-circle mar_l-16 mar_r-16"></i>Help {"&"}{" "}
+          <i className="fas fa-question-circle mar_l-32 mar_r-16"></i>Help {"&"}{" "}
           FAQs
         </NavLink>
         <NavLink
@@ -161,7 +184,7 @@ const SideDrawer = ({ sideDrawerRef, isDrawerOpen, setIsDrawerOpen }) => {
           activeClassName="fwb fc_white bg_pri"
           exact
         >
-          <i className="fas fa-headset mar_l-16 mar_r-16"></i>Contact Us
+          <i className="fas fa-headset mar_l-32 mar_r-16"></i>Contact Us
         </NavLink>
       </div>
     </div>

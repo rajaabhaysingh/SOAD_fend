@@ -141,7 +141,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home h-100 w-100">
+    <div className="home h-100 w-100 bb fcol">
       <CarouselSlider />
       <section className="home_layout_box of-hid shadow_neumorph">
         {/* left part */}

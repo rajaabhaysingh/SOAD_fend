@@ -24,10 +24,16 @@ export default () => {
   // handling error responses
   useEffect(() => {
     if (error) {
-      for (let item in error.error) {
+      for (let item in error) {
+        // todo (backend):
+        let tempItem = item;
+        if (item === "email" || item === "phone") {
+          item = "username";
+        }
+        // ------
         setFieldErrors({
           ...fieldErrors,
-          [item]: error.error[item][0],
+          [item]: error[tempItem][0],
         });
       }
     }
@@ -43,8 +49,6 @@ export default () => {
       history.push("/login");
     }
   }, [data]);
-
-  console.log(data);
 
   const onChange = (e) => {
     setForm({
