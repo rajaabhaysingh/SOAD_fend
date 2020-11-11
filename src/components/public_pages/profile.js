@@ -1,6 +1,6 @@
 import React from 'react';
 import "../../styles/publicpages.css"
-import mans from "../../images/man.jpg"
+import patil from "../../images/abhijit.jpg"
 const Profile = () => {
   return(
     <div>
@@ -9,7 +9,7 @@ const Profile = () => {
                 <div className="row mb-3">
                     <div className="col-lg-4">
                         <div className="card mb-3">
-                            <div className="card-body text-center shadow"><img className="rounded-circle mb-3 mt-4" src={mans} alt="avatarimage" width="160" height="160" />
+                            <div className="card-body text-center shadow"><img className="rounded-circle mb-3 mt-4" src={patil} alt="avatarimage" width="160" height="160" />
                                 <div className="mb-3"><button className="btn btn-primary btn-sm" type="button">Change Photo</button></div>
                             </div>
                         </div>
@@ -52,18 +52,36 @@ const Profile = () => {
                                         <form >
                                             <div className="form-row">
                                                 <div className="col">
-                                                    <div className="form-group"><label for="username"><strong>Username</strong></label><input className="form-control" type="text" placeholder="user.name" name="username" /></div>
+                                                    <div className="form-group"><label for="username"><strong>Username</strong></label> - Abhijit Patil</div>
                                                 </div>
                                                 <div className="col">
-                                                    <div className="form-group"><label for="email"><strong>Email Address</strong></label><input className="form-control" type="email" placeholder="user@example.com" name="email" /></div>
+                                                    <div className="form-group"><label for="email"><strong>Email Address</strong></label> - abhijit85@gmail.com</div>
                                                 </div>
                                             </div>
                                             <div className="form-row">
                                                 <div className="col">
-                                                    <div className="form-group"><label for="first_name"><strong>First Name</strong></label><input className="form-control" type="text" placeholder="John" name="first_name" /></div>
+                                                    <div className="form-group"><label for="first_name"><strong>First Name</strong></label> - <b>Abhijit</b></div>
                                                 </div>
                                                 <div className="col">
-                                                    <div className="form-group"><label for="last_name"><strong>Last Name</strong></label><input className="form-control" type="text" placeholder="Doe" name="last_name" /></div>
+                                                    <div className="form-group"><label for="last_name"><strong>Last Name</strong></label> - <b>Patil</b></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="card shadow mb-3">
+                                    <div className="card-header py-3">
+                                        <p className="text-primary m-0 font-weight-bold">Contact Details</p>
+                                    </div>
+                                    <div className="card-body">
+                                        <form>
+                                            <div className="form-group"><label for="address"><strong>Address</strong></label> - Ring Rd, Shivaji Place, Block D, Raja Garden, New Delhi, Delhi 110015</div>
+                                            <div className="form-row">
+                                                <div className="col">
+                                                    <div className="form-group"><label for="city"><strong>City</strong></label> - Delhi</div>
+                                                </div>
+                                                <div className="col">
+                                                    <div className="form-group"><label for="country"><strong>Country</strong></label>- <b>INDIA</b></div>
                                                 </div>
                                             </div>
                                         </form>
@@ -71,20 +89,11 @@ const Profile = () => {
                                 </div>
                                 <div className="card shadow">
                                     <div className="card-header py-3">
-                                        <p className="text-primary m-0 font-weight-bold">Contact Details</p>
+                                        <p className="text-primary m-0 font-weight-bold">About Me</p>
                                     </div>
                                     <div className="card-body">
-                                        <form>
-                                            <div className="form-group"><label for="address"><strong>Address</strong></label><input className="form-control" type="text" placeholder="Sunset Blvd, 38" name="address" /></div>
-                                            <div className="form-row">
-                                                <div className="col">
-                                                    <div className="form-group"><label for="city"><strong>City</strong></label><input className="form-control" type="text" placeholder="Los Angeles" name="city" /></div>
-                                                </div>
-                                                <div className="col">
-                                                    <div className="form-group"><label for="country"><strong>Country</strong></label><input className="form-control" type="text" placeholder="USA" name="country" /></div>
-                                                </div>
-                                            </div>
-                                        </form>
+                                    Abhijit Patil is the founder and CEO of Emerald & Gold Technologies, a leading manufacturer of personal electronics accessories. She finds honesty, creativity and dedication to be the most valuable qualities for success in running her company. In the 10 years since founding Emerald & Gold, Vicente has led the company to an 18% lead in sales over its closest competitor.
+                                    <br /><br />Patil holds an MBA from the University of Texas at Austin, where she was captain of the women’s rowing team. In one match, despite overturning their boat in the first lap, she and her team came from behind to win second place in the state championship. Vicente hopes to continue using her determination and quick thinking skills to turn Emerald & Gold into a Fortune 500 company
                                     </div>
                                 </div>
                             </div>

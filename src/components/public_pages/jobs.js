@@ -1,11 +1,11 @@
 import React from 'react';
 import "../../styles/publicpages.css"
-import mans from "../../images/man.jpg"
 import {Table} from "react-bootstrap"
 
 const Jobs = () => {
   return(
     <div>
+      <h2 className="text-dark pl-4 mb-4">Jobs</h2>
         <Table striped bordered hover>
             <thead className="customtable">
                 <tr>

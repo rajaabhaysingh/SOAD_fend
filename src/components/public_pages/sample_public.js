@@ -1,14 +1,11 @@
-import React, {useState} from "react";
-import { Component } from "react";
-import ReactDOM from "react-dom";
-import { Jumbotron, Button, Container, Row, Col, Modal, Navbar, Nav, Form, FormControl } from 'react-bootstrap';
+import React from "react";
 import "../../styles/publicpages.css"
-import mans from "../../images/man.jpg"
+import patil from "../../images/abhijit.jpg"
 import Profile from "./profile"
 import Jobs from "./jobs"
 import Projects from "./projects"
 import Experience from "./experience"
-import {BrowserRouter, Route, Link, NavLink} from "react-router-dom";
+import {BrowserRouter, Route, NavLink} from "react-router-dom";
   
 
 const Sample_Public = () => {
@@ -25,6 +22,7 @@ const Sample_Public = () => {
             <div className="pl-3 h6 text-white mt-5"><i className="fas fa-user-alt text-white text-bold"></i> <NavLink to="/public/profile" className="text-white">Profile</NavLink></div>
             <div className="pl-3 h6 text-white mt-5"><i className="fa fa-building text-white text-bold"></i> <NavLink to="/public/jobs" className="text-white">Jobs</NavLink></div>
             <div className="pl-3 h6 text-white mt-5"><i className="fas fa-user-alt text-white text-bold"></i> <NavLink to="/public/experience" className="text-white">Experience</NavLink></div>
+            <div className="pl-3 h6 text-white mt-5"><i className="fas fa-project-diagram text-white text-bold"></i> <NavLink to="/public/projects" className="text-white">Projects</NavLink></div>
             <div className="pl-3 h6 text-white mt-5"><i className="fas fa-user-alt text-white text-bold"></i> <NavLink to="/public/info" className="text-white">Personal Information</NavLink></div>
             <div className="pl-3 h6 text-white mt-5"><i className="fa fa-gear text-white text-bold"></i> <NavLink to="/public/settings" className="text-white">Settings</NavLink></div>
             <div className="pl-3 h6 text-white mt-5"><i className="fa fa-sign-out text-white text-bold"></i> <NavLink to="/public/logout" className="text-white">Logout</NavLink></div>
@@ -67,7 +65,7 @@ const Sample_Public = () => {
                       </li>
                       <div className="d-none d-sm-block topbar-divider"></div>
                       <li className="nav-item dropdown no-arrow mr-3" role="presentation">
-                          <div className="nav-item dropdown no-arrow"><span className="d-none d-lg-inline mr-2 text-gray-600 small">Abhijit Patil</span><img className="border rounded-circle img-profile" src={mans} alt="imagea" height="30px" width="30px"/>
+                          <div className="nav-item dropdown no-arrow"><span className="d-none d-lg-inline mr-2 text-gray-600 small">Abhijit Patil</span><img className="border rounded-circle img-profile" src={patil} alt="imagea" height="30px" width="30px"/>
                       </div>
                       </li>
                       </ul>

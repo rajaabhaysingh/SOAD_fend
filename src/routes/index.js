@@ -60,13 +60,7 @@ const routes = [
   },
   // Public Pages
   {
-    path: "/public" | "/public/profile",
-    component: Sample_Public,
-    title: "Workgent - Public pages",
-    needsAuth: false,
-  },
-  {
-    path: "/public/jobs",
+    path: "/public",
     component: Sample_Public,
     title: "Workgent - Public pages",
     needsAuth: false,
@@ -77,6 +71,7 @@ const routes = [
     component: Search,
     title: `Workgent - ${"Search name"}`,
     needsAuth: false,
+    exact:true
   },
   // Trending
   {
