@@ -1,0 +1,24 @@
+.themaindiv{
+  height:100%;
+}
+
+.theinnermaindiv{
+  height:100%;
+}
+.firstboxes{
+  padding-left:200px;
+  background-color: #5270FF;
+  height: 100%;
+}
+
+.secondboxes{
+  background-color: #DCDCDC;
+  height: 100%;
+}
+
+/* Jobs Component */
+
+.customtable{
+  background-color: #4c5057;
+  color:white;
+}
